@@ -1,0 +1,56 @@
+<theme>
+
+    <colorScheme name="blue">
+        <variables>
+            <mainColor>0196ff</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="green">
+        <variables>
+            <mainColor>73ff01</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="orange">
+        <variables>
+            <mainColor>f35e23</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="pink">
+        <variables>
+            <mainColor>ff0196</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="purple">
+        <variables>
+            <mainColor>c601ff</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="red">
+        <variables>
+            <mainColor>ff0000</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="teal">
+        <variables>
+            <mainColor>00f0ff</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="white">
+        <variables>
+            <mainColor>ffffff</mainColor>
+        </variables>
+    </colorScheme>
+
+    <colorScheme name="yellow">
+        <variables>
+            <mainColor>ffea01</mainColor>
+        </variables>
+    </colorScheme>
+</theme>

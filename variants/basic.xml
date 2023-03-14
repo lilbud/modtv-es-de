@@ -1,0 +1,26 @@
+<theme>
+    <include>./../assets.xml</include>
+
+    <variables>
+		<box>./../assets/box.png</box>
+		<mainFont>./../assets/font.ttf</mainFont>
+        <overlayPath>./../assets/overlays/basic.png</overlayPath>
+	</variables>
+
+    <view name="gamelist">
+
+        <image name="overlay">
+           <path>${overlayPath}</path>
+        </image>
+
+        <textlist name="gamelist">
+			<pos>0.17 0.19</pos>
+			<size>0.656 0.68</size>
+			<horizontalAlignment>center</horizontalAlignment>
+		</textlist>
+
+    </view>
+
+
+
+</theme>

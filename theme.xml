@@ -1,0 +1,258 @@
+<theme>
+    <include>./assets.xml</include>
+
+    <variables>
+		<box>./assets/box.png</box>
+		<mainFont>./assets/font.ttf</mainFont>
+        <systemLogo>./assets/system_logos/${system.theme}.svg</systemLogo>
+        <backgroundPath>./assets/bg.jpg</backgroundPath>
+	</variables>
+
+    <variant name="Basic">
+		<include>./variants/basic.xml</include>
+	</variant>
+
+	<variant name="Detailed">
+		<include>./variants/detailed.xml</include>
+	</variant>
+	
+	<variant name="Video">
+		<include>./variants/video.xml</include>
+	</variant>
+
+    <variant name="Detailed, Video">
+        <view name="gamelist">
+            <textlist name="gamelist">
+                <pos>0.01 0.149</pos>
+                <size>0.26 0.704</size>
+                <horizontalAlignment>left</horizontalAlignment>
+            </textlist>
+            
+            <text name="md_players, md_developer, md_publisher, md_genre, md_playcount, md_description">
+                <color>f0f0f0</color>
+                <fontSize>0.027</fontSize>
+                <fontPath>${mainFont}</fontPath>
+                <zIndex>2</zIndex>
+            </text>
+            
+            <image name="Players_Icon">
+                <path>./assets/icons/players.png</path>
+                <tile>false</tile>
+                <pos>0.685 0.144</pos>
+                <color>ffffff</color>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+            </image>
+            
+            <text name="md_players">
+                <metadata>players</metadata>
+                <pos>0.71 0.13</pos>
+                <size>0.04 0.032</size>
+            </text>
+            
+            <image name="ReleaseDate_Icon">
+                <path>./assets/icons/released.png</path>
+                <tile>false</tile>
+                <pos>0.8 0.144</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <datetime name="md_releasedate">
+                <color>f0f0f0</color>
+                <pos>0.82 0.13</pos>
+                <size>0.136 0.035</size>
+                <fontSize>0.027</fontSize>
+                <fontPath>${mainFont}</fontPath>
+                <metadata>releasedate</metadata>
+            </datetime>
+            
+            <image name="Developer_Icon">
+                <path>./assets/icons/developer.png</path>
+                <tile>false</tile>
+                <pos>0.685 0.219</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <text name="md_developer">
+                <metadata>developer</metadata>
+                <pos>0.71 0.2</pos>
+                <size>0.247 0.041</size>
+            </text>
+            
+            <image name="Publisher_Icon">
+                <path>./assets/icons/publisher.png</path>
+                <tile>false</tile>
+                <pos>0.685 0.295</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <text name="md_publisher">
+                <metadata>publisher</metadata>
+                <pos>0.71 0.275</pos>
+                <size>0.247 0.041</size>
+            </text>
+            
+            <image name="Genre_Icon">
+                <path>./assets/icons/genre.png</path>
+                <tile>false</tile>
+                <pos>0.685 0.37</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <text name="md_genre">
+                <metadata>genre</metadata>
+                <pos>0.71 0.35</pos>
+                <size>0.247 0.041</size>
+            </text>
+            
+            <image name="Rating_Icon">
+                <path>./assets/icons/rating.png</path>
+                <tile>false</tile>
+                <pos>0.685 0.445</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <rating name="md_rating">
+                <pos>0.71 0.43</pos>
+                <size>0.685 0.037</size>
+                <filledPath>./assets/icons/heart_full.png</filledPath>
+                <unfilledPath>./assets/icons/heart_empty.png</unfilledPath>
+            </rating>
+            
+            <image name="Play_Count_Icon">
+                <path>./assets/icons/play_count.png</path>
+                <tile>false</tile>
+                <pos>0.687 0.523</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <text name="md_playcount">
+                <metadata>playcount</metadata>
+                <pos>0.71 0.5</pos>
+                <size>0.064 0.044</size>
+            </text>
+            
+            <image name="Last_Played_Icon">
+                <path>./assets/icons/last_played.png</path>
+                <tile>false</tile>
+                <pos>0.8 0.523</pos>
+                <origin>0.5 0.5</origin>
+                <maxSize>0.026 0.039</maxSize>
+                <color>ffffff</color>
+            </image>
+            
+            <datetime name="md_lastplayed">
+                <metadata>lastplayed</metadata>
+                <pos>0.82 0.502</pos>
+                <size>0.138 0.040</size>
+                <fontPath>${mainFont}</fontPath>
+                <fontSize>0.027</fontSize>
+                <color>ffffff</color>
+            </datetime>
+            
+            <text name="md_description">
+                <metadata>description</metadata>
+                <pos>0.4 0.622</pos>
+                <size>0.535 0.258</size>
+            </text>
+        </view>
+    </variant>
+
+    <view name="system">
+		<carousel name="systemCarousel">
+			<type>horizontal</type>
+			<staticImage>${systemLogo}</staticImage>
+			<imageInterpolation>linear</imageInterpolation>
+			<unfocusedItemOpacity>0.5</unfocusedItemOpacity>
+            <color>00000099</color>
+            <pos>0 0.383796</pos>
+            <size>1 0.232407</size>
+            <fontSize>0.055</fontSize>
+            <fontPath>${mainFont}</fontPath>
+		</carousel>
+
+		<text name="gameCounter">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.6437</pos>
+            <size>1 0.056</size>
+            <fontSize>0.035</fontSize>
+            <fontPath>${mainFont}</fontPath>
+			<systemdata>gamecount</systemdata>
+            <color>${mainColor}</color>
+			<horizontalAlignment>center</horizontalAlignment>
+			<backgroundColor>000000BB</backgroundColor>
+			<letterCase>uppercase</letterCase>
+			<zIndex>50</zIndex>
+		</text>
+
+        <image name="footer">
+            <pos>0 1</pos>
+            <origin>0 1</origin>
+            <size>1 0.058</size>
+            <path>${box}</path>
+            <color>00000080</color>
+            <zIndex>50</zIndex>
+        </image>
+	</view>
+
+    <view name="system, gamelist">
+        <image name="background">
+            <size>1 1</size>
+            <pos>0 0</pos>
+            <path>${backgroundPath}</path>
+            <zIndex>0</zIndex>
+        </image>
+
+        <helpsystem name="help">
+			<textColor>ffffff</textColor>
+			<iconColor>ffffff</iconColor>
+			<textColorDimmed>ffffff</textColorDimmed>
+			<iconColorDimmed>ffffff</iconColorDimmed>
+            <fontPath>${mainFont}</fontPath>
+            <fontSize>0.027</fontSize>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.971</pos>
+		</helpsystem>
+    </view>
+
+    <view name="gamelist">
+
+        <image name="logo">
+            <path>${systemLogo}</path>
+            <pos>0.02 0.0645</pos>
+			<maxSize>0.25 0.08</maxSize>
+			<origin>0 0.5</origin>
+            <zIndex>2</zIndex>
+        </image>
+
+        <image name="overlay">
+            <size>1 1</size>
+            <pos>0 0</pos>
+            <color>${mainColor}</color>
+            <zIndex>1</zIndex>
+        </image>
+
+        <textlist name="gamelist">
+			<selectorColor>${mainColor}</selectorColor>
+			<fontPath>${mainFont}</fontPath>
+			<selectedColor>000000</selectedColor>
+			<primaryColor>FFFFFF</primaryColor>
+			<secondaryColor>FFFFFF</secondaryColor>
+			<fontSize>0.03</fontSize>
+			<horizontalMargin>0.01</horizontalMargin>
+		</textlist>
+    </view>
+
+</theme>
