@@ -33,7 +33,7 @@ jobs:
         run: git clone "https://gitlab.com/es-de/themes/system-logos.git"
 
       - name: copy logos
-        run: cp -r ./system-logos/system-logo-${{ LogoType }}/. ./assets/system_logos
+        run: cp -r ./system-logos/system-logo-$LogoType/. ./assets/system_logos
 
       - name: Commit
         run: |
