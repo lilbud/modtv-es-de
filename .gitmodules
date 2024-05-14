@@ -1,0 +1,3 @@
+[submodule "system-logos"] 
+  path = .
+  url = git@gitlab.com:es-de/themes/system-logos.git
