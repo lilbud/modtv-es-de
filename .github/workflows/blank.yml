@@ -32,7 +32,7 @@ jobs:
       - name: grab new logos
         run: git clone "https://gitlab.com/es-de/themes/system-logos.git"
 
-      - name: copy logos
+      - name: copy specified logos
         run: cp -r ./system-logos/system-logo-$LogoType/. ./assets/system_logos
 
       - name: Commit
