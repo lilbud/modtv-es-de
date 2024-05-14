@@ -33,6 +33,12 @@ jobs:
       - name: copy specified logos
         run: cp -r ./system-logos/system-logo-$LogoType/. $LogosDir
 
+      # remove the cloned logos folder from root
+      # there is probably a 'proper' way to do this
+      - name: remove clone
+        run: |
+          rm -rf system-logos/
+
       - name: Commit
         run: |
           git config --local user.name "${GITHUB_ACTOR}"
@@ -42,6 +48,3 @@ jobs:
       - name: Push
         run: |
           git push origin main
-      - name: remove clone
-        run: |
-          rm -rf ./system-logos
