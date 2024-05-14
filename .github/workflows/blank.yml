@@ -12,11 +12,11 @@ on:
 
 env:
   LogoType: white
+  LogosDir: ./assets/system_logos
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  get-logos:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -25,12 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
+      # Clones newest logos from the Gitlab Repo
       - name: grab new logos
         run: git clone "https://gitlab.com/es-de/themes/system-logos.git"
 
+      # Copies the specified logo type to your assets folder
       - name: copy specified logos
-        run: cp -r ./system-logos/system-logo-$LogoType/. ./assets/system_logos
+        run: cp -r ./system-logos/system-logo-$LogoType/. $LogosDir
 
       - name: Commit
         run: |
@@ -43,4 +44,4 @@ jobs:
           git push origin main
       - name: remove clone
         run: |
-          rm -f ./system-logos
+          rm -rf ./system-logos
