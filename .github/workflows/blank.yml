@@ -43,5 +43,4 @@ jobs:
           git push origin main
       - name: remove clone
         run: |
-          git rm ./system-logos
-          rm -rf ./system-logos
+          rm -f ./system-logos
